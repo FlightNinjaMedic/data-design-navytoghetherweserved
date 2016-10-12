@@ -21,7 +21,8 @@
 
 			<section>
 				<p>
-
+					An active duty, reserve member or retired navy veteran looking to stay in touch with all current or
+					former shipmates based on common duty stations.
 				</p>
 				<!-- Need to add image here -->
 			</section>
