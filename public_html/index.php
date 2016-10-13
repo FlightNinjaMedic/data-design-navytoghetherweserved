@@ -22,21 +22,21 @@
 			</p>
 
 				<p>
-			     Profession: Bill is a hard core former Operation Iraqi Freedom Veteran, veteran looking to stay in touch with all current or former Devil Doc's based on common duty stations.
+			     Profession: Bill is a hard core retired marine looking to stay in touch with all current or former Devil Doc's based on common duty stations.
 				</p>
 
 			<p>
 				Technology: Extremely technologically challenged, Was a marine who's career time was totally spent in an infantry unit. Served five back to back tours in Iraq and two more in Afghanistan. Owns a Motorola Razor flip phone and has no interest in ever owning a smart phone.
 			</p>
 			<p>
-				Attitude and Behaviors:
+				Attitude and Behaviors: Now retired, Bill has an outstanding attitude towards life, loves to fish and camping. Once a month he gets toghether with other retired members of the armed forces at Cabezon Wounded Warrior Haven for some real life war games. As Bill puts it: "You can take Bill out of the marines, but you will never take the marine out of Bill"
 			</p>
 			<p>
 				Frustrations and Needs:
 			</p>
 			<p>
 				Goals:
-			</h3></p>
+			</p>
 		</section>
 		<section>
 			<h2>Use Case</h2>
