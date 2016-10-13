@@ -45,7 +45,7 @@
 			<fieldset>
 			<h2>Use Case</h2>
 				<p>
-					Bill has taken a leap of faith and bought a used Acer laptop.
+					Bill has taken a leap of faith and bought a used Acer laptop and now surfs the web 2 -3 hours a day
 				</p>
 				<p>
 					Bill has registered with Navy Toghether We Served and since reconnected with a number of friends. Hard to believe but he has expressed a interest in a smart phone so that he can stay in touch with his friends while on the go.
@@ -55,26 +55,34 @@
 
 		<section>
 			<fieldset>
-				<h2>Conceptual Model</h2>
-				<p>
-					Identity: Profile
+				<h1>Conceptual Model</h1>
+
+					<h1>Entity: Profile</h1>
 					<ul>
 					<li>profileId (primary key)</li>
 					<li>profileFirstName</li>
 					<li>profileLastName</li>
 					<li>profileEmail (unique)</li>
+						<li>profileImage</li>
 				</ul>
-				</p>
 
-				<p>
-					Identity: Duty Station
+					<h1>Entity: Duty Station</h1>
+				Relationship: profile has a m - n relationship
 					<ul>
 					<li>dutyStationId (primary key)</li>
 					<li>dutyStationName</li>
 					<li>dutyStationLocation</li>
-					<li></li>
+						<li>dutyStationImage</li>
+					</ul>
+
+				<h1>Entity: Profile Duty Station (weak)</h1>
+				Relationship: profile has a m - n relationship
+				<ul>
+					<!-- This here is called the compound primary key -->
+					<li>profileDutyStationDutyStationId</li>
+					<li>profileDutyStationProfileId</li>
+
 				</ul>
-				</p>
 			</fieldset>
 		</section>
 	</body>
