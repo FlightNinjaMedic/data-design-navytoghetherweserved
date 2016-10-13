@@ -13,6 +13,7 @@
 		<h1>HOORAH!</h1></header>
 	<body>
 		<section>
+			<fieldset>
 			<h2>Persona</h2>
 			<p>
 				Name: Devil Bill
@@ -37,6 +38,7 @@
 			<p>
 				Goals:
 			</p>
+				</fieldset>
 		</section>
 		<section>
 			<h2>Use Case</h2>
