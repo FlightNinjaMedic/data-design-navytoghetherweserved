@@ -52,5 +52,30 @@
 				</p>
 			</fieldset>
 		</section>
+
+		<section>
+			<fieldset>
+				<h2>Conceptual Model</h2>
+				<p>
+					Identity: Profile
+					<ul>
+					<li>profileId (primary key)</li>
+					<li>profileFirstName</li>
+					<li>profileLastName</li>
+					<li>profileEmail (unique)</li>
+				</ul>
+				</p>
+
+				<p>
+					Identity: Duty Station
+					<ul>
+					<li>dutyStationId (primary key)</li>
+					<li>dutyStationName</li>
+					<li>dutyStationLocation</li>
+					<li></li>
+				</ul>
+				</p>
+			</fieldset>
+		</section>
 	</body>
 </html>
