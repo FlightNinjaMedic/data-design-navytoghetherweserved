@@ -1,4 +1,6 @@
-body {	font-size: large;
-	color: black;
+header {
+	text-align: center
+}
+body {
 	background-color: yellow;
 }
