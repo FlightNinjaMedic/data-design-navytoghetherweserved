@@ -45,7 +45,7 @@
 			<fieldset>
 			<h2>Use Case</h2>
 				<p>
-					Bill has taken a leap of faith and bought a used Acer laptop and now surfs the web 2 -3 hours a day
+					Bill has taken a leap of faith and bought a used Acer laptop and now surfs the web 2 -3 hours a day on most days because he also likes to go camping and fishing.
 				</p>
 				<p>
 					Bill has registered with Navy Toghether We Served and since reconnected with a number of friends. Hard to believe but he has expressed a interest in a smart phone so that he can stay in touch with his friends while on the go.
