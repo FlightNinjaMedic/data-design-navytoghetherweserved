@@ -15,8 +15,12 @@ CREATE TABLE dutystation
  	dutyStationId INT UNSIGNED AUTO_INCREMENT NOT NULL,
 	dutyStationName VARCHAR(32) NOT NULL,
 	dutyStationLocation VARCHAR(32) NOT NULL,
-	dutyStationImage
-	PRIMARY KEY (dutyStationId)
+	dutyStationImage VARCHAR(256) NOT NULL,
+	PRIMARY KEY (dutyStationId),
 );
 
 CREATE TABLE profiledutystation
+(
+	profileDutyStationId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+
+);
