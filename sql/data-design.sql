@@ -1,4 +1,7 @@
 -- drop table statements go here
+DROP TABLE IF EXISTS profiledutystation;
+DROP TABLE IF EXISTS dutystation;
+DROP TABLE IF EXISTS profile;
 
 CREATE TABLE  profile
 (
@@ -7,6 +10,8 @@ CREATE TABLE  profile
 	profileLastName  VARCHAR(32) NOT NULL ,
 	profileEmail     VARCHAR(128) NOT NULL ,
 	UNIQUE (profileEmail),
+	INDEX (profileEmail),
+	INDEX (profileId),
 	PRIMARY KEY (profileId)
 );
 
@@ -16,7 +21,9 @@ CREATE TABLE dutystation
 	dutyStationName VARCHAR(32) NOT NULL,
 	dutyStationLocation VARCHAR(32) NOT NULL,
 	dutyStationImage VARCHAR(256) NOT NULL,
-	PRIMARY KEY (dutyStationId),
+	UNIQUE (dutyStationName),
+	INDEX (dutyStationId),
+	PRIMARY KEY (dutyStationId)
 );
 
 CREATE TABLE profiledutystation
