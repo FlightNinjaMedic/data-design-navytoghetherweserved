@@ -8,4 +8,15 @@ CREATE TABLE  profile
 	profileEmail     VARCHAR(128) NOT NULL ,
 	UNIQUE (profileEmail),
 	PRIMARY KEY (profileId)
-)
+);
+
+CREATE TABLE dutystation
+(
+ 	dutyStationId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	dutyStationName VARCHAR(32) NOT NULL,
+	dutyStationLocation VARCHAR(32) NOT NULL,
+	dutyStationImage
+	PRIMARY KEY (dutyStationId)
+);
+
+CREATE TABLE profiledutystation
