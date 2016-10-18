@@ -21,6 +21,13 @@ CREATE TABLE dutystation
 
 CREATE TABLE profiledutystation
 (
-	profileDutyStationId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	profileDutyStationId INT UNSIGNED NOT NULL,
+	profileDutyStationDutyStationId INT UNSIGNED NOT NULL,
+	profileDutyStationProfileId INT UNSIGNED NOT NULL,
+	INDEX (profileDutyStationDutyStationId),
+	INDEX (profileDutyStationProfileId),
+	FOREIGN KEY (profileDutyStationDutyStationId) REFERENCES profile (profileId),
+	FOREIGN KEY (profileDutyStationProfileId) REFERENCES dutystation (dutyStationId),
+	PRIMARY KEY (profileDutyStationDutyStationId, profileDutyStationProfileId)
 
 );
