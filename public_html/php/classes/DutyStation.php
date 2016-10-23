@@ -33,6 +33,23 @@ class DutyStation{
 	// CONSTRUCTOR GOES HERE LATER
 
 	/**
+	 * DutyStation constructor.
+	 * @param int|null $newDutyStationId Id of this duty station or null if new duty station
+	 * @param string $newDutyStationName string contains actual duty station name
+	 * @param string $newDutyStationLocation string contains actual duty station location
+	 * @param string $newDutyStationImage string contains actual duty station image
+	 **/
+	public function __construct(int $newDutyStationId = null, string $newDutyStationName, string $newDutyStationLocation, string $newDutyStationImage) {
+		$this->setDutyStationId($newDutyStationId);
+		$this->setDutyStationName($newDutyStationName);
+		$this->setDutyStationLocation($newDutyStationLocation);
+		$this->setDutyStationImage($newDutyStationImage);
+
+	}
+
+
+
+	/**
 	 * Accesor method for dutyStationId
 	 *
 	 * @return int|null value of duty station id
@@ -49,7 +66,7 @@ class DutyStation{
 	 * @thows \TypeError if $newDutyStationId is not an integer
 	 **/
 
-	public function setDutyStationId(int $newDutyStationId = null) {
+	public function setDutyStationId(int $newDutyStationId) {
 		// base case: if the duty station id is null, this is a new duty station without a mySQL assigned id (yet)
 		if($newDutyStationId === null) {
 			$this->dutyStationId = null;
