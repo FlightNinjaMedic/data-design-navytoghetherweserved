@@ -40,17 +40,29 @@ class DutyStation{
 	 * @param string $newDutyStationImage string contains actual duty station image
 	 * @throws \InvalidArgumentException if data types are not valid
 	 * @throws \RangeException if data values are out of bounds (e.g. strings too long, negative integers)
-	 * @throws \typeError if data violates type hints
+	 * @throws \TypeError if data violates type hints
 	 * @throws \Exception if any other exception occurs
 	 **/
 	public function __construct(int $newDutyStationId = null, string $newDutyStationName, string $newDutyStationLocation, string $newDutyStationImage) {
-		$this->setDutyStationId($newDutyStationId);
-		$this->setDutyStationName($newDutyStationName);
-		$this->setDutyStationLocation($newDutyStationLocation);
-		$this->setDutyStationImage($newDutyStationImage);
-
+		try {
+			$this->setDutyStationId($newDutyStationId);
+			$this->setDutyStationName($newDutyStationName);
+			$this->setDutyStationLocation($newDutyStationLocation);
+			$this->setDutyStationImage($newDutyStationImage);
+		} catch(\InvalidArgumentException $invalidArgument) {
+			// rethrow the exception to the caller
+			throw (new \InvalidArgumentException($invalidArgument->getMessage(), 0, $invalidArgument));
+		} catch(\RangeException $rangeException) {
+			// rethrow the exception to the caller
+			throw (new \RangeException($rangeException->getMessage(), 0, $rangeException));
+		} catch(\TypeError $typeError) {
+			// rethrow the exception to the caller
+			throw (new \TypeError($typeError->getMessage(), 0, $typeError));
+		} catch(\Exception $exception) {
+			// rethrow the exception to the caller
+			throw (new \Exception($exception->getMessage(), 0, $exception));
+		}
 	}
-
 
 
 	/**
