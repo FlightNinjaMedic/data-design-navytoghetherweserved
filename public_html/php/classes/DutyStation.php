@@ -125,7 +125,7 @@ class DutyStation{
 		}
 
 		//verify the duty station name will fit in the database
-		if(strlen($newDutyStationName) <= 32) {
+		if(strlen($newDutyStationName) >= 32) {
 			throw(new \RangeException("duty station name too large"));
 		}
 
