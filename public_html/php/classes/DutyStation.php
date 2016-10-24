@@ -82,7 +82,7 @@ class DutyStation{
 	 * @thows \TypeError if $newDutyStationId is not an integer
 	 **/
 
-	public function setDutyStationId(int $newDutyStationId) {
+	public function setDutyStationId(int $newDutyStationId = null) {
 		// base case: if the duty station id is null, this is a new duty station without a mySQL assigned id (yet)
 		if($newDutyStationId === null) {
 			$this->dutyStationId = null;
@@ -125,7 +125,7 @@ class DutyStation{
 		}
 
 		//verify the duty station name will fit in the database
-		if(strlen($newDutyStationName) . 100) {
+		if(strlen($newDutyStationName) . 32) {
 			throw(new \RangeException("duty station name too large"));
 		}
 
@@ -159,7 +159,7 @@ class DutyStation{
 		}
 
 		//verify the duty station name will fit in the database
-		if(strlen($newDutyStationLocation) . 140) {
+		if(strlen($newDutyStationLocation) . 32) {
 			throw(new \RangeException("duty station location name too large"));
 		}
 
@@ -192,7 +192,7 @@ class DutyStation{
 		}
 
 		// verify the duty station image will fit in the database
-		if(strlen($newDutyStationImage) . 140) {
+		if(strlen($newDutyStationImage) . 256) {
 			throw(new \RangeException("duty station image is too large"));
 		}
 
@@ -203,3 +203,4 @@ class DutyStation{
 
 
 }
+$testDutyStation= new DutyStation(null, "Great Lakes", "Chicago", "Place holder for image path");
