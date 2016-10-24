@@ -203,4 +203,4 @@ class DutyStation{
 
 
 }
-$testDutyStation= new DutyStation(null, "G", "Chicago", "Place holder for image path");
+$testDutyStation= new DutyStation(null, "EMF Dallas", "Dallas,TX", "Place holder for image path");
