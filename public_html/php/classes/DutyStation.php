@@ -119,13 +119,13 @@ class DutyStation{
 	public function setDutyStationName(string $newDutyStationName) {
 		// verify the duty station name is secure
 		$newDutyStationName = trim($newDutyStationName);
-		$newDutyStationName = filter_var($newDutyStationName, FILTER_SANITIZE_STRING);
+		$newDutyStationName = filter_var($newDutyStationName, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 		if(empty($newDutyStationName) === true) {
 			throw(new \InvalidArgumentException("duty station name is empty or insecure"));
 		}
 
 		//verify the duty station name will fit in the database
-		if(strlen($newDutyStationName) >= 32) {
+		if(strlen($newDutyStationName) > 32) {
 			throw(new \RangeException("duty station name too large"));
 		}
 
@@ -145,7 +145,7 @@ class DutyStation{
 	/**
 	 * Mutator method for duty station location
 	 *
-	 * 	 * @param string $newDutyStationLocation new value of duty station location
+	 * @param string $newDutyStationLocation new value of duty station location
 	 * @throws \InvalidArgumentException if $newDutyStationLocation is not a string or insecure
 	 * @throws \RangeException if $newDutyStationLocation is > 140 characters
 	 * @throws \TypeError if $newDutyStationLocation is not a string
@@ -153,13 +153,13 @@ class DutyStation{
 	public function setDutyStationLocation(string $newDutyStationLocation) {
 		// verify the duty station location is secure
 		$newDutyStationLocation = trim($newDutyStationLocation);
-		$newDutyStationLocation = filter_var($newDutyStationLocation, FILTER_SANITIZE_STRING);
+		$newDutyStationLocation = filter_var($newDutyStationLocation, FILTER_SANITIZE_STRING,FILTER_FLAG_NO_ENCODE_QUOTES );
 		if(empty($newDutyStationLocation) === true) {
 			throw(new \InvalidArgumentException("duty station location is empty or insecure"));
 		}
 
 		//verify the duty station name will fit in the database
-		if(strlen($newDutyStationLocation) . 32) {
+		if(strlen($newDutyStationLocation) > 32) {
 			throw(new \RangeException("duty station location name too large"));
 		}
 
@@ -186,13 +186,13 @@ class DutyStation{
 	public function setDutyStationImage(string $newDutyStationImage) {
 		// verify that the duty station image is secure
 		$newDutyStationImage = trim($newDutyStationImage);
-		$newDutyStationImage = filter_var($newDutyStationImage, FILTER_SANITIZE_STRING);
+		$newDutyStationImage = filter_var($newDutyStationImage, FILTER_SANITIZE_STRING, FILTER_FLAG_NO_ENCODE_QUOTES);
 		if(empty($newDutyStationImage) === true) {
 			throw(new \InvalidArgumentException("duty station image is empty or insecure"));
 		}
 
 		// verify the duty station image will fit in the database
-		if(strlen($newDutyStationImage) . 256) {
+		if(strlen($newDutyStationImage) > 256) {
 			throw(new \RangeException("duty station image is too large"));
 		}
 
